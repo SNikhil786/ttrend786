@@ -15,4 +15,14 @@ pipeline {
             }
         }
     }
+    stage('Sonarqube Analysis') {
+    environment {
+        scannerHome = tool 'SonarQube-Scanner'
+    }
+    steps {
+        withSonarQubeEnv('SonarQube-Server') {
+            sh "${scannerHome}/bin/sonar-scanner"
+        }
+    }
+}
 }
