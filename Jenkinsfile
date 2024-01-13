@@ -62,7 +62,7 @@ stage("Jar Publish") {
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "ttrend-libs-release/{1}",
+                              "target": "ttrend-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5","*.xml"]
