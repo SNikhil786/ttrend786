@@ -92,7 +92,7 @@ stage("Jar Publish") {
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
-                docker.withRegistry(registry, 'artifactory_token'){
+                docker.withRegistry(registry, 'Jfrog-token'){
                     app.push()
                 }    
                echo '<--------------- Docker Publish Ended --------------->'  
